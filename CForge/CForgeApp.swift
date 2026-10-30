@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 
@@ -33,6 +34,7 @@ struct CForgeApp: App {
                 }
             }
         }
+        .modelContainer(PersistenceController.shared.container)
     }
 }
 

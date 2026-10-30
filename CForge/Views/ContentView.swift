@@ -33,6 +33,11 @@ struct ContentView: View {
                             Label("Problems", systemImage: "list.bullet")
                         }
 
+                    RecommendedProblemsView()
+                        .tabItem {
+                            Label("For You", systemImage: "sparkles")
+                        }
+
                     ProfileView()
                         .tabItem {
                             Label("Profile", systemImage: "person.crop.circle")

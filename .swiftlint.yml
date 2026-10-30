@@ -1,0 +1,64 @@
+included:
+  - CForge
+
+excluded:
+  - CForge.xcodeproj
+  - CForgeTests
+  - CForgeUITests
+  - CForge/Preview Content
+
+disabled_rules:
+  - trailing_whitespace
+  - multiple_closures_with_trailing_closure  # Standard SwiftUI pattern with overlapping closures
+
+opt_in_rules:
+  - array_init
+  - closure_spacing
+  - contains_over_filter_count
+  - empty_count
+  - first_where
+  - sorted_imports
+  - unused_import
+
+line_length:
+  warning: 130
+  error: 160
+  ignores_comments: true
+  ignores_urls: true
+
+type_body_length:
+  warning: 350
+  error: 500
+
+function_body_length:
+  warning: 70
+  error: 120
+
+file_length:
+  warning: 450
+  error: 600
+
+type_name:
+  excluded:
+    - API_Submission   # ProfileModels — legacy naming, rename tracked separately
+    - API_Verdict
+    - API_Problem
+
+identifier_name:
+  min_length:
+    warning: 2
+  excluded:
+    - id   # SwiftUI Identifiable
+    - r    # Color components
+    - g
+    - b
+    - a    # Alpha / Color hex parsing
+    - x    # Geometry / math
+    - y
+    - t    # Generic type param, time
+    - i    # Loop index
+    - l    # Switch pattern matching (lhs/rhs single char)
+    - p    # Closure param (problem, path)
+    - d    # Decoder / data / date
+
+reporter: "xcode"
