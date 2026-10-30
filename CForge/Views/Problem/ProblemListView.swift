@@ -153,18 +153,18 @@ struct ProblemListView: View {
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
                             .background(
-                                    ZStack {
-                                        if selectedTag == tag {
-                                            LinearGradient(
-                                                colors: [.neonBlue, .neonPurple],
-                                                startPoint: .topLeading,
-                                                endPoint: .bottomTrailing
-                                            )
-                                        } else {
-                                            Color.darkerBackground
-                                        }
+                                ZStack {
+                                    if selectedTag == tag {
+                                        LinearGradient(
+                                            colors: [.neonBlue, .neonPurple],
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        )
+                                    } else {
+                                        Color.darkerBackground
                                     }
-                                )
+                                }
+                            )
                             .foregroundColor(selectedTag == tag ? .white : .primary)
                             .cornerRadius(12)
                             .overlay(
